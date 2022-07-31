@@ -48,18 +48,46 @@
         - document.getElementsByClassName()
         - document.getElementsByTagName()
  Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
- */
-function descrição (texto){
-  let mudaTexto = document.getElementsByTagName('p')[1] = texto 
-}
-
-/*
  Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
  Crie e execute uma função que mude a cor do quadrado vermelho para branco.
  Crie e execute uma função que corrija o texto da tag <h1>.
  Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+       function descrição (texto){
+        let mudaTexto = document.getElementsByTagName('p')[1]
+        mudaTexto.innerText = texto
+       }
+       descrição('Me vejo trabalhando na área de programação nos proximos 2 anos')
+
+       function corMain (qualCor){
+        let mudaCor = document.getElementsByTagName('main')[0] ;
+        mudaCor.style.backgroundColor = qualCor
+       }
+       corMain('Green')
+       function centerContent (qualCor){
+        let mudaCorCenter = document.getElementsByClassName('center-content')[0]
+        mudaCorCenter.style.backgroundColor = qualCor
+       }
+       centerContent('White')
+       function titulo (corrige){
+        let tituloH1 = document.getElementsByClassName('title')[0]
+        tituloH1.innerText = corrige
+       }
+       titulo('Java Script')
+       function maiusculo (){
+        let aumentaP = document.getElementsByTagName('p')[2].innerText
+        aumentaP.toUpperCase();
+        console.log(aumentaP);
+       }
+      function texto (qualTag){
+        let textosP = document.getElementsByTagName(qualTag)
+        for (let index = 0 ; index < textosP.length ; index += 1){
+          console.log(textosP[index].innerText)
+        }
+      }
+      
+       
     </script>
   </body>
 </html>
